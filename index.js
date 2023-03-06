@@ -13,7 +13,7 @@ const plainTextPassword1 = "DFGh5546*%^__90";
 
 for (let saltRounds = 10; saltRounds < 21; saltRounds++) {
   console.time(`bcrypt | number of salt rounds: ${saltRounds}, time to hash`);
-  let hash = bcrypt.hashSync(plainTextPassword1, saltRounds);
+  let hash = bcrypt.hashSync(plainTextPassword1, saltRounds); // hash and hashSync perform the same operation and take the same arguments
   console.log("-------------")
   console.log(hash)
   console.timeEnd(`bcrypt | number of salt rounds: ${saltRounds}, time to hash`);
